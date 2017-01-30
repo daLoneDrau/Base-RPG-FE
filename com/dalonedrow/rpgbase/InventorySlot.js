@@ -12,7 +12,6 @@ function InventorySlot() {
     show = false;
     /**
      * Gets the item occupying the inventory slot.
-     * 
      * @return {@link IO}
      */
     this.getIo = function() {
@@ -20,7 +19,6 @@ function InventorySlot() {
     }
     /**
      * Gets the flag indicating the item is showing and should be rendered.
-     * 
      * @return <code>boolean</code>
      */
     this.isShow = function() {
@@ -28,9 +26,7 @@ function InventorySlot() {
     }
     /**
      * Sets the item occupying the inventory slot.
-     * 
-     * @param val
-     *            the val to set
+     * @param val the val to set
      */
     this.setIo = function(val) {
         io = val;
@@ -38,9 +34,7 @@ function InventorySlot() {
     }
     /**
      * Sets the flag indicating the item is showing and should be rendered.
-     * 
-     * @param flag
-     *            the show to set
+     * @param flag the show to set
      */
     this.setShow = function(flag) {
         show = flag;

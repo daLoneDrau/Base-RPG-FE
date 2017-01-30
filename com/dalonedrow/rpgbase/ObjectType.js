@@ -15,3 +15,4 @@ var ObjectType = {
     OBJECT_TYPE_SHIELD : 1 << 5,
     OBJECT_TYPE_WEAPON : 1
 };
+module.exports = ObjectType;

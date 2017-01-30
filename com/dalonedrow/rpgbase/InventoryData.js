@@ -8,28 +8,20 @@ function InventoryData() {
     var io = null;
     /** flag indicating the left ring needs to be replaced. */
     var leftRing = false;
-    /** the number of inventory slots. */
-    var numInventorySlots;
     /** the inventory slots. */
     var slots;
     /**
      * Sets the inventory slots.
-     * 
-     * @param val
-     *            the inventory slots
+     * @param val the inventory slots
      */
     function setSlots(val) {
         slots = val;
     }
     /**
      * Sends messages between an item and its owner that it is now in inventory.
-     * 
-     * @param invOwnerIO
-     *            the owner
-     * @param itemIO
-     *            the item
-     * @throws Error
-     *             if an error occurs
+     * @param invOwnerIO the owner
+     * @param itemIO the item
+     * @throws Error if an error occurs
      */
     this.ARX_INVENTORY_Declare_InventoryIn = function(invOwnerIO, itemIO) {
         if (itemIO !== null) {
@@ -62,13 +54,9 @@ function InventoryData() {
     }
     /**
      * Action when a player attempts to identify an item.
-     * 
-     * @param playerIO
-     *            the player's {@link IO}
-     * @param itemIO
-     *            the itme's {@link IO}
-     * @throws Error
-     *             if an error occurs
+     * @param playerIO the player's {@link IO}
+     * @param itemIO the itme's {@link IO}
+     * @throws Error if an error occurs
      */
     this.ARX_INVENTORY_IdentifyIO = function(playerIO, itemIO) {
         if (playerIO != null && playerIO.hasIOFlag(IoGlobals.IO_01_PC)
@@ -85,13 +73,10 @@ function InventoryData() {
     }
     /**
      * Determines if an item can be put in inventory.
-     * 
-     * @param itemIO
-     *            the item
+     * @param itemIO the item
      * @return <tt>true</tt> if the item can be put in inventory;
      *         <tt>false</tt> otherwise
-     * @throws Error
-     *             if an error occurs
+     * @throws Error if an error occurs
      */
     this.CheckForInventoryReplaceMe = function(itemIO) {
         var can = false;
@@ -183,13 +168,9 @@ function InventoryData() {
     }
     /**
      * UNTESTED DO NOT USE Replaces an item in an IO's inventory.
-     * 
-     * @param itemIO
-     *            the item being added
-     * @param old
-     *            the item being replaced
-     * @throws Error
-     *             if an error occurs
+     * @param itemIO the item being added
+     * @param old the item being replaced
+     * @throws Error if an error occurs
      */
     this.CheckForInventoryReplaceMe = function(itemIO, old) {
         if (itemIO !== null && old !== null) {
@@ -235,9 +216,7 @@ function InventoryData() {
     }
     /**
      * Forces all items to be set at a specific level.
-     * 
-     * @param level
-     *            the level
+     * @param level the level
      */
     this.ForcePlayerInventoryObjectLevel = function(level) {
         for (var i = slots.length - 1; i >= 0; i--) {
@@ -248,7 +227,6 @@ function InventoryData() {
     }
     /**
      * Gets the IO associated with this {@link InventoryData}.
-     * 
      * @return {@link IO}
      */
     this.getIo = function() {
@@ -256,9 +234,7 @@ function InventoryData() {
     }
     /**
      * Gets the inventory slot at the specific index.
-     * 
-     * @param index
-     *            the slot index
+     * @param index the slot index
      * @return {@link SLOT}
      */
     this.getSlot = function(index) {
@@ -266,9 +242,7 @@ function InventoryData() {
     }
     /**
      * Determines if an item is in inventory.
-     * 
-     * @param io
-     *            the item
+     * @param io the item
      * @return <tt>true</tt> if the item is in inventory; <tt>false</tt>
      *         otherwise
      */
@@ -285,13 +259,9 @@ function InventoryData() {
     }
     /**
      * Replaces an item in all inventories.
-     * 
-     * @param oldItemIO
-     *            the old item being replaced
-     * @param newItemIO
-     *            the new item
-     * @throws Error
-     *             if an error occurs
+     * @param oldItemIO the old item being replaced
+     * @param newItemIO the new item
+     * @throws Error if an error occurs
      */
     this.ReplaceInAllInventories = function(oldItemIO, newItemIO) {
         if (oldItemIO != null && !oldItemIO.hasIOFlag(IoGlobals.IO_15_MOVABLE)
@@ -321,13 +291,9 @@ function InventoryData() {
     }
     /**
      * Sends a scripted command to an item in inventory.
-     * 
-     * @param itemName
-     *            the item name
-     * @param message
-     *            the message
-     * @throws Error
-     *             if an error occurs
+     * @param itemName the item name
+     * @param message the message
+     * @throws Error if an error occurs
      */
     this.SendInventoryObjectCommand = function(itemName, message) {
         if (itemName !== null && itemName.length() > 0 && slots !== null) {
@@ -351,9 +317,7 @@ function InventoryData() {
     }
     /**
      * Sets the IO associated with the inventory.
-     * 
-     * @param newIO
-     *            the IO to set
+     * @param newIO the IO to set
      */
     this.setIo = function(newIO) {
         this.io = newIO;
@@ -361,9 +325,7 @@ function InventoryData() {
     /**
      * Sets the value of the flag indicating whether the left ring is the next
      * one that needs to be switched.
-     * 
-     * @param flag
-     *            the new value to set
+     * @param flag the new value to set
      */
     this.setLeftRing = function(flag) {
         this.leftRing = flag;
@@ -371,7 +333,6 @@ function InventoryData() {
     /**
      * Gets the flag indicating whether the left ring is the next one that needs
      * to be switched.
-     * 
      * @return <tt>true</tt> if the left ring should be switched;
      *         <tt>false</tt> otherwise
      */
