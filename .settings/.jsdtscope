@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="com/dalonedrow/rpgbase"/>
+	<classpathentry excluding="coverage/lcov-report/|**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="com/dalonedrow/test"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="com/dalonedrow/test/coverage/lcov-report"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="com/dalonedrow/util"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
