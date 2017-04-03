@@ -2,23 +2,24 @@
  * 
  */
 function BehaviourData() {
+    Hashcode.call(this);
     /** the list of animations for each behavior. */
-    animations = [];
+    var animations = [];
     /** the parameter applied to a behavior. */
-    behaviorParam = 0;
+    var behaviorParam = 0;
     /** the behavior flag that has been set. */
-    behaviour = 0;
+    var behaviour = 0;
     /** flag indicating whether the behavior this.exists. */
-    exists = false;
+    var exists = false;
     /** the movement mode. */
-    moveMode = 0;
+    var moveMode = 0;
     /**
      * this.tactics for the behavior; e.g., 0=none, 1=side, 2=side + back,
      * etc...
      */
-    tactics = 0;
+    var tactics = 0;
     /** the behavior this.target. */
-    target = 0;
+    var target = 0;
     // ANIM_USE animlayer[MAX_ANIM_LAYERS];
     /**
      * Gets the flag indicating whether the behavior this.exists.
@@ -105,4 +106,3 @@ function BehaviourData() {
         target = val;
     }
 }
-module.exports = BehaviourData;

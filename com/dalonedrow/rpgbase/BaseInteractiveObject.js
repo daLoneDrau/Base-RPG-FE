@@ -1,10 +1,6 @@
 /**
  * 
  */
-var Hashcode = require("./Hashcode.js");
-var IoGlobals = require("./IoGlobals.js");
-var IOSpellCastData = require("./IOSpellCastData.js");
-var ObjectType = require("./ObjectType.js");
 function BaseInteractiveObject(id) {
     Hashcode.call(this);
     /** the animation ids associated with the interactive object. */
@@ -932,4 +928,3 @@ function BaseInteractiveObject(id) {
         weaponmaterial = val;
     }
 }
-module.exports = BaseInteractiveObject;

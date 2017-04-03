@@ -19,4 +19,3 @@ function Watchable() {
         watchers.splice(index, 1);
     }    
 }
-module.exports = Watchable;

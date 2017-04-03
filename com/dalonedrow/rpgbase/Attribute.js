@@ -1,12 +1,18 @@
 /**
  * 
  */
-var Hashcode = require("./Hashcode.js");
 function Attribute() {
     Hashcode.call(this);
+    /** the {@link Attribute}'s name abbreviation. */
     var abbreviation = null;
-    var displayName = null;
+    /** the {@link Attribute}'s base value. */
+    var base = 0;
+    /** the {@link Attribute}'s description. */
     var description = null;
+    /** the {@link Attribute}'s display name. */
+    var displayName = null;
+    /** the value of any modifiers to the attribute. */
+    var modifier = 0;
 	if (arguments.length === 1
 	        && arguments[0] instanceof Attribute) {
 		abbreviation = arguments[0].code;
@@ -30,8 +36,6 @@ function Attribute() {
 	if (displayName === null) {
 		throw new Error("name cannot be null");
 	}
-    var base = 0;
-    var modifier = 0;
     /**
      * Sets the value for the modifier.
      * @param val the value to set
@@ -133,4 +137,3 @@ function Attribute() {
         displayName = val;
     }
 }
-module.exports = Attribute;
